@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format('woff2 supports variations'),
+        url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('woff2-variations');
+    font-weight: 500 800;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --colors-blue-100: #eeeef7;
+    --colors-white: #fefefe;
+    --colors-dark-blue: #1409ac;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Plus Jakarta Sans';
+    background-color: var(--colors-blue-100);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content {
+    background-color: var(--colors-white);
+    border-radius: .8rem;
+    width: min(95%, 900px);
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 250ms;
 }
 
-.App-link {
-  color: #61dafb;
+/* @media screen and (max-width: 780px) {
+    .content {
+        width: min(95%, 900px);
+    }
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__title {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.header__count {
+    background-color: var(--colors-dark-blue);
+    display: inline-block;
+    color: var(--colors-white);
+    padding-inline: .7rem;
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    margin-left: .6rem;
+}
+
+.header__btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 525px) {
+    .content {
+        width: min(100%);
+        padding: 1rem;
+    }
+    .header__title {
+        font-size: 1.5rem;
+    }
+    .header__count{
+        font-size: 1.2;
+    }
+    .notification__avatar {
+        width: 40px !important;
+        height: 40px !important;
+    }
 }
