@@ -2,7 +2,7 @@
 const newFollower = (id, name, date, avatar, open) => {
 
     return (
-        <section className={`notification ${open && "open"}`} key={id}>
+        <section className={`notification ${open ? "open":""}`} key={id}>
             <img
                 className="notification__avatar"
                 src={avatar}

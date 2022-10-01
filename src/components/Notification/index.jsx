@@ -4,7 +4,8 @@ import {
     newFollower,
     reactedOnRecentPost,
     joinedYourGroup,
-    privateMessage
+    privateMessage,
+    commentPicture
 } from "./models";
 
 export default Notification = ({ data }) => {
@@ -16,13 +17,15 @@ export default Notification = ({ data }) => {
 
                 switch (notify.type) {
                     case "follow":
-                        return newFollower(id, name, date, avatar, post, open);
+                        return newFollower(id, name, date, avatar, open);
                     case "reacted":
                         return reactedOnRecentPost(avatar, date, id, name, open, post);
                     case "group":
                         return joinedYourGroup(avatar, date, id, group, name, open);
                     case "message":
                         return privateMessage(avatar, date, id, message, name, open);
+                    case "comment":
+                        return commentPicture(avatar, date, id, name, picture, open)
                 }
             })}
         </>

@@ -14,6 +14,15 @@ function App() {
       });
   }, []);
 
+  function handleClick() {
+    setNotificationCount("0")
+    setNotifications(notifications.map(notify => {
+      notify.open = true
+      return notify
+    }))
+
+  }
+
   return (
     <div className="container">
       <section className="content">
@@ -22,13 +31,15 @@ function App() {
             Notifications
             <span className="header__count">{notificationCount}</span>
           </h1>
-          <button className="header__btn">
+          <button className="header__btn" onClick={handleClick}>
             <span>Mark all as read</span>
           </button>
         </header>
 
+        {/* FIXME: resolver questão de confirmação de leitura */}
         <main className="main">
-          <Notification data={notifications} />
+          <Notification data={notifications}
+            className={`main ${notificationCount == 0 ? "open" : ""}`} />
         </main>
       </section>
     </div>

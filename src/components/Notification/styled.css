@@ -60,3 +60,9 @@
     margin-block-start: .625rem;
     padding: 1rem;
 }
+
+.notification__picture {
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+}

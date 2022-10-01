@@ -1,7 +1,7 @@
 const reactedOnRecentPost = (avatar, date, id, name, open, post) => {
 
     return (
-        <section className={`notification ${open && "open"}`} key={id}>
+        <section className={`notification ${open ? "open":""}`} key={id}>
             <img
                 className="notification__avatar"
                 src={avatar}
