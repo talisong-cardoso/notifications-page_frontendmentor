@@ -9,8 +9,9 @@ const privateMessage = (avatar, date, id, message, name, open) => {
             />
             <div className="notification__details">
                 <div>
-                    <p className="notification__name">{name}</p>
-                    followed you {!open && <div className="notification__dot"></div>}
+                    <span className="notification__name">{name} </span>
+                    followed you
+                    {!open && <div className="notification__dot"></div>}
                 </div>
                 <p className="notification__date">{date}</p>
                 <article className="notification__message">

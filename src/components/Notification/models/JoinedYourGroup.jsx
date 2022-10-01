@@ -9,8 +9,9 @@ const joinedYourGroup = (avatar, date, id, group, name, open) => {
             />
             <div className="notification__details">
                 <div>
-                    <p className="notification__name">{name}</p>
-                    has joined your group<span className="notification__group">{group}</span> {!open && <div className="notification__dot"></div>}
+                    <span className="notification__name">{name} </span>
+                    has joined your group
+                    <span className="notification__group"> {group}</span> {!open && <div className="notification__dot"></div>}
                 </div>
                 <p className="notification__date">{date}</p>
             </div>

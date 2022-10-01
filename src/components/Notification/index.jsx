@@ -9,8 +9,6 @@ import {
 
 export default Notification = ({ data }) => {
 
-    // FIXME: responsividade do texto na notification
-
     return (
         <>
             {data.map((notify) => {

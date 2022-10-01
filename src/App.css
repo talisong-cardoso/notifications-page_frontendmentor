@@ -4,20 +4,30 @@
         url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('woff2-variations');
     font-weight: 500 800;
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 :root {
-    --colors-blue-100: #eeeef7;
-    --colors-white: #fefefe;
-    --colors-dark-blue: #1409ac;
+    --colors-blue-50: hsl(210, 60%, 98%);
+    --colors-blue-100: hsl(211, 68%, 94%);
+    --colors-blue-150: hsl(205, 33%, 90%);
+    --colors-blue-700: hsl(219, 85%, 26%);
+    --colors-grayish-blue-100: hsl(211, 68%, 94%);
+    --colors-grayish-blue-200: hsl(205, 33%, 90%);
+    --colors-grayish-blue-300: hsl(219, 14%, 63%);
+    --colors-grayish-blue-500: hsl(219, 12%, 42%);
+    --colors-dark-blue-700: hsl(224, 21%, 14%);
+    --colors-white: hsl(0, 0%, 100%);
+    --colors-red: hsl(1, 90%, 64%);
 }
 
 body {
     font-family: 'Plus Jakarta Sans';
-    background-color: var(--colors-blue-100);
+    background-color: var(--colors-blue-50);
 }
 
 .container {
@@ -30,11 +40,12 @@ body {
 .content {
     background-color: var(--colors-white);
     border-radius: .8rem;
-    width: min(95%, 900px);
+    width: min(95%, 725px);
     padding-inline: 2rem;
     display: flex;
     flex-direction: column;
     transition: all 250ms;
+    box-shadow: 0 0 20px var(--colors-grayish-blue-200);
 }
 
 /* @media screen and (max-width: 780px) {
@@ -56,7 +67,7 @@ body {
 }
 
 .header__count {
-    background-color: var(--colors-dark-blue);
+    background-color: var(--colors-blue-700);
     display: inline-block;
     color: var(--colors-white);
     padding-inline: .7rem;
@@ -70,6 +81,13 @@ body {
     background-color: transparent;
     font-size: 1rem;
     cursor: pointer;
+    padding: .625rem;
+    transition: 350ms ease-in-out background;
+}
+
+.header__btn:hover {
+    border-radius: 4px;
+    background-color: var(--colors-blue-50);
 }
 
 @media screen and (max-width: 525px) {
@@ -77,12 +95,15 @@ body {
         width: min(100%);
         padding: 1rem;
     }
+
     .header__title {
         font-size: 1.5rem;
     }
-    .header__count{
+
+    .header__count {
         font-size: 1.2;
     }
+
     .notification__avatar {
         width: 40px !important;
         height: 40px !important;

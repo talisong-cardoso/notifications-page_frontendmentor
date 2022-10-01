@@ -1,6 +1,6 @@
 .notification {
     display: flex;
-    background-color: #f2f4f5;
+    background-color: var(--colors-blue-50);
     border-radius: .5rem;
     margin-block: .625rem;
     cursor: pointer;
@@ -25,37 +25,33 @@
     margin-inline-start: 1.25rem;
 }
 
-.notification__details > div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 5px;
-}
-
 .notification__name {
     font-weight: 800;
 }
 
 .notification__group {
     font-weight: 800;
-    color: darkblue;
+    color: var(--colors-blue-700);
 }
 
 .notification__post {
     font-weight: 800;
-    color: gray;
+    color: var(--colors-grayish-blue-500);
 }
 
 
 .notification__dot {
+    display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: var(--colors-red);
+    margin-inline-start: .325rem;
 }
 
 .notification__date {
     display: block;
+    color: var(--colors-grayish-blue-300);
 }
 
 .notification__message {

@@ -9,8 +9,9 @@ const reactedOnRecentPost = (avatar, date, id, name, open, post) => {
             />
             <div className="notification__details">
                 <div>
-                    <p className="notification__name">{name}</p>
-                    reacted to your recent post <span className="notification__post">{post}</span>
+                    <span className="notification__name">{name} </span>
+                    reacted to your recent post 
+                    <span className="notification__post"> {post}</span>
                     {!open && <div className="notification__dot"></div>}
                 </div>
                 <p className="notification__date">{date}</p>
