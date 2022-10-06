@@ -1,0 +1,64 @@
+[
+  {
+    "id": 0,
+    "name": "Mark Webber",
+    "type": "reacted",
+    "open": false,
+    "post": "My first tournament today!",
+    "date": "1m ago",
+    "avatar": "https://i.ibb.co/Ht1p3Gr/avatar-mark-webber.webp"
+  },
+  {
+    "id": 1,
+    "name": "Angela Gray",
+    "open": false,
+    "type": "follow",
+    "date": "5m ago",
+    "avatar": "https://i.ibb.co/v44cnhG/avatar-angela-gray.webp"
+  },
+  {
+    "id": 2,
+    "name": "Jacob Thompson",
+    "open": false,
+    "type": "group",
+    "group": "Chess Club",
+    "date": "1 day ago",
+    "avatar": "https://i.ibb.co/ZJWQVxH/avatar-jacob-thompson.webp"
+  },
+  {
+    "id": 3,
+    "name": "Rizky Hasanuddin",
+    "open": true,
+    "type": "message",
+    "message": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+    "date": "5 day ago",
+    "avatar": "https://i.ibb.co/DD0v8GX/avatar-rizky-hasanuddin.webp"
+  },
+  {
+    "id": 4,
+    "name": "Kimberly Smith",
+    "open": true,
+    "type": "comment",
+    "picture": "https://i.ibb.co/NZF35Tz/image-chess.webp",
+    "date": "1 week ago",
+    "avatar": "https://i.ibb.co/d4N1QMh/avatar-kimberly-smith.webp"
+  },
+  {
+    "id": 5,
+    "name": "Nathan Peterson",
+    "open": true,
+    "type": "reacted",
+    "post": "5 end-game strategies to increase win rate",
+    "date": "2 weeks ago",
+    "avatar": "https://i.ibb.co/cbKcz0s/avatar-nathan-peterson.webp"
+  },
+  {
+    "id": 6,
+    "name": "Anna Kim",
+    "open": true,
+    "type": "group",
+    "group": "Chess Club",
+    "date": "2 weeks ago",
+    "avatar": "https://i.ibb.co/vL4w4vq/avatar-anna-kim.webp"
+  }
+]
