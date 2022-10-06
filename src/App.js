@@ -1,26 +1,41 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import Notification from "./components/Notification";
+import React, { useEffect, useState } from 'react';
+import './App.css';
+import Notification from './components/Notification';
 
 function App() {
-  const [notificationCount, setNotificationCount] = useState("3");
+  const [notificationCount, setNotificationCount] = useState('3');
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
-    fetch("api.json")
+    fetch('api.json')
       .then((res) => res.json())
       .then((data) => {
         setNotifications(data);
       });
   }, []);
 
-  function handleClick() {
-    setNotificationCount("0")
-    setNotifications(notifications.map(notify => {
-      notify.open = true
-      return notify
-    }))
+  function handleReadAllNotification() {
+    setNotificationCount('0');
+    setNotifications(
+      notifications.map((notify) => {
+        notify.open = true;
+        return notify;
+      })
+    );
+  }
 
+  function handleReadNotification(id) {
+    setNotifications(
+      notifications.map((notify) => {
+        if (notify.id == id) notify.open = true;
+        return notify;
+      })
+    );
+
+    notificationCount > 0 &&
+      setNotificationCount((prev) => {
+        return (prev -= 1);
+      });
   }
 
   return (
@@ -31,15 +46,17 @@ function App() {
             Notifications
             <span className="header__count">{notificationCount}</span>
           </h1>
-          <button className="header__btn" onClick={handleClick}>
+          <button className="header__btn" onClick={handleReadAllNotification}>
             <span>Mark all as read</span>
           </button>
         </header>
 
-        {/* FIXME: resolver questão de confirmação de leitura */}
         <main className="main">
-          <Notification data={notifications}
-            className={`main ${notificationCount == 0 ? "open" : ""}`} />
+          <Notification
+            data={notifications}
+            className={`main ${notificationCount == 0 ? 'open' : ''}`}
+            onClick={handleReadNotification}
+          />
         </main>
       </section>
     </div>

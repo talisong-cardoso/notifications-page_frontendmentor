@@ -1,8 +1,12 @@
-
-const newFollower = (id, name, date, avatar, open) => {
+import React from "react";
+const newFollower = (id, name, date, avatar, open, onClick) => {
 
     return (
-        <section className={`notification ${open ? "open":""}`} key={id}>
+        <section 
+            className={`notification ${open ? 'open' : ''}`} 
+            key={id}
+            onClick={()=>{onClick(id)}}
+        >
             <img
                 className="notification__avatar"
                 src={avatar}

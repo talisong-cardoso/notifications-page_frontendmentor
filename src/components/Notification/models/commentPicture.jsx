@@ -1,8 +1,13 @@
+import React from "react";
 
-const commentPicture = (avatar, date, id, name, picture, open) => {
+const commentPicture = (avatar, date, id, name, picture, open, onClick) => {
 
     return (
-        <section className={`notification ${open && "open"}`} key={id}>
+        <section 
+            className={`notification ${open && "open"}`} 
+            key={id}
+            onClick={()=>{onClick(id)}}
+        >
             <img
                 className="notification__avatar"
                 src={avatar}

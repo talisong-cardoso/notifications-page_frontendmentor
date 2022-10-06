@@ -8,7 +8,7 @@ import {
     commentPicture
 } from "./models";
 
-export default Notification = ({ data }) => {
+export default Notification = ({ data, onClick }) => {
 
     return (
         <>
@@ -17,15 +17,15 @@ export default Notification = ({ data }) => {
 
                 switch (notify.type) {
                     case "follow":
-                        return newFollower(id, name, date, avatar, open);
+                        return newFollower(id, name, date, avatar, open, onClick);
                     case "reacted":
-                        return reactedOnRecentPost(avatar, date, id, name, open, post);
+                        return reactedOnRecentPost(avatar, date, id, name, open, post, onClick);
                     case "group":
-                        return joinedYourGroup(avatar, date, id, group, name, open);
+                        return joinedYourGroup(avatar, date, id, group, name, open, onClick);
                     case "message":
-                        return privateMessage(avatar, date, id, message, name, open);
+                        return privateMessage(avatar, date, id, message, name, open, onClick);
                     case "comment":
-                        return commentPicture(avatar, date, id, name, picture, open)
+                        return commentPicture(avatar, date, id, name, picture, open, onClick)
                 }
             })}
         </>
