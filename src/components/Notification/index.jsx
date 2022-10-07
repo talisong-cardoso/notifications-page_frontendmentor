@@ -5,10 +5,11 @@ import {
     reactedOnRecentPost,
     joinedYourGroup,
     privateMessage,
-    commentPicture
+    commentPicture,
+    leftGroup
 } from "./models";
 
-export default Notification = ({ data, onClick }) => {
+const Notification = ({ data, onClick }) => {
 
     return (
         <>
@@ -20,14 +21,20 @@ export default Notification = ({ data, onClick }) => {
                         return newFollower(id, name, date, avatar, open, onClick);
                     case "reacted":
                         return reactedOnRecentPost(avatar, date, id, name, open, post, onClick);
-                    case "group":
+                    case "joined-group":
                         return joinedYourGroup(avatar, date, id, group, name, open, onClick);
+                    case "left-group":
+                        return leftGroup(avatar, date, id, group, name, open, onClick);
                     case "message":
                         return privateMessage(avatar, date, id, message, name, open, onClick);
                     case "comment":
-                        return commentPicture(avatar, date, id, name, picture, open, onClick)
+                        return commentPicture(avatar, date, id, name, picture, open, onClick);
+                    default:
+                        return null
                 }
             })}
         </>
     );
 };
+
+export default Notification;

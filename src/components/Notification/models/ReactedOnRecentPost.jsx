@@ -1,13 +1,12 @@
 import React from 'react';
 
 const reactedOnRecentPost = (avatar, date, id, name, open, post, onClick) => {
-    console.log(onClick)
 
   return (
     <section
       className={`notification ${open ? 'open' : ''}`}
       key={id}
-      onClick={()=>{onClick(id)}}
+      onClick={() => { onClick(id) }}
     >
       <img className="notification__avatar" src={avatar} alt="avatar" />
       <div className="notification__details">

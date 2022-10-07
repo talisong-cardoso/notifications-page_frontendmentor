@@ -27,7 +27,7 @@ function App() {
   function handleReadNotification(id) {
     setNotifications(
       notifications.map((notify) => {
-        if (notify.id == id) notify.open = true;
+        if (notify.id === id) notify.open = true;
         return notify;
       })
     );
@@ -54,7 +54,7 @@ function App() {
         <main className="main">
           <Notification
             data={notifications}
-            className={`main ${notificationCount == 0 ? 'open' : ''}`}
+            className={`main ${notificationCount === 0 ? 'open' : ''}`}
             onClick={handleReadNotification}
           />
         </main>

@@ -1,11 +1,12 @@
 import React from "react";
+
 const newFollower = (id, name, date, avatar, open, onClick) => {
 
     return (
-        <section 
-            className={`notification ${open ? 'open' : ''}`} 
+        <section
+            className={`notification ${open ? 'open' : ''}`}
             key={id}
-            onClick={()=>{onClick(id)}}
+            onClick={() => { onClick(id) }}
         >
             <img
                 className="notification__avatar"

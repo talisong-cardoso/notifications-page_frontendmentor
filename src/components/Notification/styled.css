@@ -1,9 +1,8 @@
 .notification {
   display: flex;
-  background-color: var(--colors-blue-100);
+  background-color: var(--colors-blue-50);
   border-radius: 0.5rem;
   margin-block: 0.625rem;
-  cursor: pointer;
   padding: 1rem;
 }
 
@@ -25,13 +24,24 @@
   margin-inline-start: 1.25rem;
 }
 
+.notification__details {
+  color: var(--colors-grayish-blue-500);
+}
+
 .notification__name {
+  color: var(--colors-dark-blue-700);
   font-weight: 800;
+}
+
+.notification__name:hover {
+  cursor: pointer;
+  color: var(--colors-blue-700);
 }
 
 .notification__group {
   font-weight: 800;
   color: var(--colors-blue-700);
+  cursor: pointer;
 }
 
 .notification__post {
@@ -39,25 +49,37 @@
   color: var(--colors-grayish-blue-500);
 }
 
+.notification__post:hover {
+  cursor: pointer;
+  color: var(--colors-blue-700);
+}
+
 .notification__dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: var(--colors-red);
-  margin-inline-start: 0.325rem;
+  margin-inline-start: 0.2rem;
 }
 
 .notification__date {
   display: block;
   color: var(--colors-grayish-blue-300);
+  margin-block-start: 0.2rem;
 }
 
 .notification__message {
-  border: 1px solid #ccc;
-  border-radius: 0.325rem;
+  border: 1px solid var(--colors-grayish-blue-300);
+  border-radius: 0.5rem;
   margin-block-start: 0.625rem;
   padding: 1rem;
+  transition: 150ms ease-out background;
+}
+
+.notification__message:hover {
+  cursor: pointer;
+  background-color: var(--colors-blue-100);
 }
 
 .notification__picture {

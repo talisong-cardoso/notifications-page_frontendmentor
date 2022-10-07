@@ -20,7 +20,7 @@
     "id": 2,
     "name": "Jacob Thompson",
     "open": false,
-    "type": "group",
+    "type": "joined-group",
     "group": "Chess Club",
     "date": "1 day ago",
     "avatar": "https://i.ibb.co/ZJWQVxH/avatar-jacob-thompson.webp"
@@ -56,7 +56,7 @@
     "id": 6,
     "name": "Anna Kim",
     "open": true,
-    "type": "group",
+    "type": "left-group",
     "group": "Chess Club",
     "date": "2 weeks ago",
     "avatar": "https://i.ibb.co/vL4w4vq/avatar-anna-kim.webp"
