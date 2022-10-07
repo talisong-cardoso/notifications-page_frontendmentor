@@ -5,9 +5,6 @@
   font-weight: 500 800;
 }
 
-/* A fonte foi adicionada desta forma por conta de um 'bug' na plataforma Stackblitz.com que não renderizava a font pelo @font-face */
-/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap'); */
-
 * {
   padding: 0;
   margin: 0;
